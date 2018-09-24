@@ -25,7 +25,7 @@ class Search extends Component {
     // used to call the api to get repos tags, returns the latest tag name
     getTag = (url, cb) => {
         fetch(url, {
-            headers: { "Authorization": "Token b1a2ec24c3d372628afa5caa3ecdee6bee170c9a" }
+            headers: { "Authorization": `Token ${API_TOKEN}` }
         })
             .then((tagResponse) => {
                 return tagResponse.json().then(json => {
