@@ -20,7 +20,6 @@ class DisplayResult extends Component {
             this.props.favourites.allFavourites !== nextProps.favourites.allFavourites
         ) {
             this.setState({ repos: nextProps.repos, favourites: nextProps.favourites.allFavourites });
-            console.log(this.state)
         }
     }
 

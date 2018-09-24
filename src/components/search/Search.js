@@ -86,13 +86,19 @@ class Search extends Component {
             })
 
     }
+
+    handleKeyPress = (e) => {
+        if(e.key === "Enter") {
+            this.handleBtnClick()
+        }
+    }
     render() {
         const { search, display, repos } = this.state;
         return (
             <div className="container-fluid">
                 <div className="row github-input-container">
                     <div className="col-md-10 max-height no-padding">
-                        <input className="form-control github-search-input" type="text" name="title" value={search} onChange={e => this.handleInputChange(e)} />
+                        <input className="form-control github-search-input" type="text" name="title" value={search} onKeyPress={this.handleKeyPress} onChange={e => this.handleInputChange(e)} />
                     </div>
                     <div className="col-md-2 max-height no-right-padding btn-container">
                         <button className="btn github-search-btn" onClick={() => this.handleBtnClick()}>Search</button>
