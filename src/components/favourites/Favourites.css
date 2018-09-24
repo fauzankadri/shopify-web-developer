@@ -1,0 +1,39 @@
+.Favourites-container {
+    background-color: #F3EBFE;
+    min-height: 85vh;
+    width:100%;
+}
+
+.Table-container {
+    margin-left:5rem;
+    margin-top: 5rem;
+}
+
+.Table {
+    width:100%;
+    overflow-y: scroll;
+}
+
+.Table-body:before {
+    line-height:1em;
+    content:".";
+    color:white;
+}
+
+.repo-name {
+    text-decoration: none;
+    color: black;
+}
+
+.repo-btn {
+    color:#7336F1;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 325px) {
+    .Table {
+        width:initial;
+        display:block;
+    }
+}
